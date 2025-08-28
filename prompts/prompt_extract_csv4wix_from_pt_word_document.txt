@@ -1,0 +1,29 @@
+Process the given Markdown text and perform the following actions: 
+Extract the month and year from the line which is entitled Sunday Lecture Titles
+Extract the data from the single table within it.
+The first row of the table specifies the field names.
+
+The order of the output fields is as follows: 'PresentationDate','Sorting Date','Displayed date','Title','Speaker'
+
+The output field contents are as follows:
+
+'Status' : Contains 'DRAFT'
+
+'PresentationDate' : is based on the date derived from the headline of the document containing the string 'Sunday Lecture Titles' AND the value in the column named 'Date'
+
+'Sorting Date' : is the same value and format as 'PresentationDate'
+
+'Displayed date': is the same value as 'PresentationDate', but it is formatted as follows: '<month> <day>', where <month> is the 3 or 4 letter abbreviation of the month (in English), and <day> is the numeric day of the month with the appropriate postfix (e.g. nd, th, st, rd). Note that the numeric part of <day> does NOT have any leading zeros.
+
+'Speaker' : The following rules apply:
+Use the input 'Speaker' field as the basis for this.
+Remove the prefix of "Bro." (if shown).
+Only show the first initial of their first name. Place a DOT after the first initial.
+Do not include the text shown in parenthesis.
+
+Output all the rows of the table.
+Each field in the data is enclosed in double quotes.
+Order the rows in reverse date order.
+Order the rows with older dates higher in the table.
+Create output in CSV style, and use UTF-8 format for the generated file.
+The markdown text follows:
