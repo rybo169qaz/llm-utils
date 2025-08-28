@@ -15,13 +15,18 @@ The output field contents are as follows:
 
 'Displayed date': is the same value as 'PresentationDate', but it is formatted as follows: '<month> <day>', where <month> is the 3 or 4 letter abbreviation of the month (in English), and <day> is the numeric day of the month with the appropriate postfix (e.g. nd, th, st, rd). Note that the numeric part of <day> does NOT have any leading zeros.
 
+
 'Speaker' : The following rules apply:
 Use the input 'Speaker' field as the basis for this.
-Remove the prefix of "Bro." (if shown).
+If the field has a prefix "Bro.", then remove it from the field.
 Only show the first initial of their first name. Place a DOT after the first initial.
-Do not include the text shown in parenthesis.
+
+Check and ensure that no parenthesis content is included.
+Do not include any text shown in parenthesis.
+Ensure all fields are enclosed in double quotes.
 
 Output all the rows of the table.
+Output rows in date order.
 Each field in the data is enclosed in double quotes.
 Order the rows in reverse date order.
 Order the rows with older dates higher in the table.
